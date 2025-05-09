@@ -8,9 +8,9 @@ import Link from "next/link";
 import { ArrowLeft, Edit, Trash2 } from "lucide-react";
 
 import MainLayout from "@/components/layout/MainLayout";
-import ModelViewer from "@/components/pages/3d-models/ModelViewer";
 import Button from "@/components/ui/Button";
 import Modal from "@/components/ui/Modal";
+import Show3d from "@/components/pages/3d-models/Show3d";
 
 import { useModelStore } from "@/stores/modelStore";
 
@@ -132,7 +132,7 @@ export default function ModelDetailPage() {
         </div>
 
         {/* 3D Model Viewer */}
-        <ModelViewer model={currentModel} />
+        <Show3d modelUrl={currentModel.model_file} />
 
         {/* Delete confirmation modal */}
         <Modal
