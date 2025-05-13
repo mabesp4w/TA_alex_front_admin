@@ -15,10 +15,11 @@ import {
   Plant3DModel,
   Plant3DModelInput,
 } from "../types";
+import { BASE_URL } from "@/services/baseURL";
 
 // Create axios instance with base URL
 const api = axios.create({
-  baseURL: process.env.NEXT_PUBLIC_API_URL || "http://localhost:8000",
+  baseURL: BASE_URL,
   headers: {
     "Content-Type": "application/json",
   },

@@ -1,11 +1,8 @@
 /** @format */
 
 import axios from "axios";
-import config from "../../config.json";
 
-console.log({ config });
-
-const BASE_URL = config.base_url;
+const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL;
 const url_auth = `${BASE_URL}/auth`;
 const url_api = `${BASE_URL}/api`;
 const url_crud = `${BASE_URL}/crud`;
